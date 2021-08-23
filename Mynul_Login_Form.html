@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Log In From Validation</title>
+</head>
+<body>
+	<script >
+		function validation(){
+
+			var x=document.myf.mail.value;
+			var f=document.myf.mail2.value;
+			//var y=document.myf.pass.value.length;
+			var z=x.search(/[A-Za-z]+@[A-Za-z]+\.[A-Za-z]{2,3}/)
+			if(x== null || x==""){
+				alert("Enter a valid email address")
+			} else if(x !=f){
+				alert("your mail doesn't match")
+			}
+
+
+
+
+			// var status=false;
+
+			
+
+
+			// if(z==-1){
+			// 	alert("Enter an Email ID");
+			// 	return false;
+			// } else{
+			// 	status= true;
+			// } if(y<5){
+			// 	alert("Password should be at least 5 character");
+			// 	return false
+			// } else{
+			// 	status= true;
+			// } if(status== true){
+			// 	alert("Email validated")
+			// }
+		}
+	</script>
+	<form name="myf">
+		<table>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="mail" placeholder="Enter a valid Email"></td>
+				<td>Password</td>
+				<td><input type="text" name="mail2" placeholder="Re-type mail"></td>
+				<td><input type="password" name="pass" placeholder="Enter a valid Password"></td>
+				<td></td>
+				<td><input type="button" name="button" value="Submit" onclick="validation()"></td>
+			</tr>
+		</table>
+	</form>
+</body></html>
